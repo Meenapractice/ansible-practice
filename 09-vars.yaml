@@ -1,0 +1,7 @@
+- name: "Args vars"
+  hosts: local
+  connection: local
+  tasks:
+  - name: "Args variables"
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Trianer is {{ TRAINER }}"

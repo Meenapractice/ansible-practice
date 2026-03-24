@@ -1,0 +1,7 @@
+- name: "Inventory vars"
+  hosts: local
+  connection: local
+  tasks:
+  - name: "Inventory variables"
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Trianer is {{ TRAINER }}"

@@ -1,0 +1,16 @@
+- name: "Play level vars"
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "From Playlevel"
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: COURSE
+    prompt: "Please enter the COURSE"
+  tasks:
+  - name: "Play level variables"
+    vars:
+      COURSE: "Tasklevel"
+    ansible.builtin.debug:
+      msg: "{{ COURSE }}"

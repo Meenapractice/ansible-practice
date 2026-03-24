@@ -1,0 +1,11 @@
+- name: "Play level vars"
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops"
+    DURATION: 4
+    TRAINER: "Meena"
+  tasks:
+  - name: "Play level variables"
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Trianer is {{ TRAINER }}"
