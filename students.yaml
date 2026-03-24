@@ -1,0 +1,17 @@
+students:
+  - name: "John Doe"
+    age: 20
+    subjects:
+      - Math
+      - Physics
+    address:
+      street: "123 Main St"
+      city: "Boston"
+  - name: "Jane Doe"
+    age: 22
+    subjects:
+      - Biology
+      - Chemistry
+    address:
+      street: "456 Oak Ave"
+      city: "New York"
