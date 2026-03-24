@@ -1,0 +1,16 @@
+- name: "Shell vs Command"
+  hosts: local
+  connection: local
+  tasks:
+  - name: "Shell vs Command"
+    ansible.builtin.shell: "ls -l |  grep course.yaml"
+    register: output_files
+  - name: "Print output"
+    ansible.builtin.debug:
+      msg: "{{ output_files }}"
+  - name: "Shell vs Command"
+    ansible.builtin.shell: "ls -l > output.txt"
+    register: shell_files
+  - name: "Print output"
+    ansible.builtin.debug:
+      msg: "{{ shell_files }}"
