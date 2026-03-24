@@ -14,3 +14,10 @@
       COURSE: "Tasklevel"
     ansible.builtin.debug:
       msg: "{{ COURSE }}"
+
+#Args
+#task
+#file
+#prompt
+#play
+#inventory

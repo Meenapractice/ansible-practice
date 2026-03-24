@@ -1,0 +1,21 @@
+- name: "Datatypes"
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops"
+    DURATION: 4
+    DETAILS:
+      TRAINER: Meena
+      TIME: 7
+    TOPICS:
+    - linux
+    - shell
+    - ansible
+  tasks:
+  - name: "Data types"
+    ansible.builtin.debug:
+      msg: |
+        Course: "{{ COURSE }}"
+        Duration: "{{ DURATION }}"
+        Details: "{{ DETAILS }}"
+        Topics: "{{ TOPICS }}"
