@@ -4,7 +4,7 @@
   vars:
     Topics: Ansible, Linux, Shell, Terraform
     COURSENAME: "DevOps with AWS"
-    IP: "256.760.567.456"
+    IP: "230.76.56.45"
     tagsMap:
       COURSE: Devops
       TRAINER: Meena
