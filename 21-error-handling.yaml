@@ -6,3 +6,7 @@
   - name: "Check user"
     ansible.builtin.user:
       user: roboshop
+
+  - name: "Add user"
+    ansible.builtin.command: useradd roboshop
+    register: useradd_output
