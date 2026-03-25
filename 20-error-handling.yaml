@@ -1,11 +1,22 @@
 - name: "Demo on error handling"
   hosts: local
   connection: local
+  become: yes
   tasks:
-  - name: "Add user"
+  - name: "Check user"
     ansible.builtin.command: id roboshop
     register: user_output
+    ignore_erros: true
 
   - name: "Print user"
     ansible.builtin.debug:
       msg: "{{ user_output }}"
+
+  - name: "Add user"
+    ansible.builtin.command: useradd roboshop
+    register: useradd_output
+
+  - name: "Print user"
+    ansible.builtin.debug:
+      msg: "{{ useradd_output }}"
+  
