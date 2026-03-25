@@ -39,7 +39,7 @@
 
   - name: "IPV4"
     ansible.builtin.debug:
-      msg: "{{ IP | myipv4 }}"
+      msg: "{{ IP | ansible.utils.ipv4 }}"
 
 
   
