@@ -3,6 +3,8 @@
   connection: local
   vars:
     Topics: Ansible, Linux, Shell, Terraform
+    COURSENAME: "DevOps with AWS"
+    IP: "256.760.567.456"
     tagsMap:
       COURSE: Devops
       TRAINER: Meena
@@ -26,6 +28,18 @@
   - name: "Yaml to json"
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json }}"
+
+  - name: "upper"
+    ansible.builtin.debug:
+      msg: "{{ COURSENAME | upper }}"
+    
+  - name: "lower"
+    ansible.builtin.debug:
+      msg: "{{ COURSENAME | lower }}"
+
+  - name: "IPV4"
+    ansible.builtin.debug:
+      msg: "{{ IP | myipv4 }}"
 
 
   
