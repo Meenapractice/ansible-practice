@@ -1,0 +1,8 @@
+- name: "Check user for idempotency"
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: "Check user"
+    ansible.builtin.user:
+      user: roboshop
